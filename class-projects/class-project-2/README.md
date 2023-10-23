@@ -1,6 +1,7 @@
 # CLASS PROJECT 2
 # Information arhitecture
 INFORMATION ARCHITECTURE & CARD SORTING
+
 Information architecture in UX design: the organization and structure of information in a way that makes it easy for users to find information and complete tasks efficiently.
 Card sorting method in UX design: a technique where users categorize information into groups that make sense to them, helping designers understand how users mentally organize information.
 
