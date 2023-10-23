@@ -1,6 +1,6 @@
 # CLASS PROJECT 2
 # 1. User personas
-![figma personas](User persona figma.jpg)
+![figma personas]([User persona figma.jpg](https://github.com/DinaVrandecic/HCI-2023-24/blob/main/class-projects/class-project-2/User%20persona%20figma.jpg))
 
 # 2. Information arhitecture
 INFORMATION ARCHITECTURE & CARD SORTING
