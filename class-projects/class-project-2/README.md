@@ -1,6 +1,6 @@
 # CLASS PROJECT 2
 # 1. User personas
-!(class-projects/class-project-2/User persona figma.jpg)
+![figma personas](User persona figma.jpg)
 
 # 2. Information arhitecture
 INFORMATION ARCHITECTURE & CARD SORTING
