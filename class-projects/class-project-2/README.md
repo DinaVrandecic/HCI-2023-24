@@ -44,4 +44,4 @@ Register / Log in
 -	Log in: requires email and password. There's also a 'forgot password' option which helps users recover their account
 
 # 3. Sitemap
-!(./sitemap.png)
+![sitemap](./sitemap.png)
