@@ -42,3 +42,6 @@ Delivery details
 Register / Log in
 -	Register: requires email, password and personal information (name and date of birth)
 -	Log in: requires email and password. There's also a 'forgot password' option which helps users recover their account
+
+# 3. Sitemap
+!(./sitemap.png)
