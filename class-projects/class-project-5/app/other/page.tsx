@@ -1,22 +1,30 @@
 import Link from "next/link";
-function Other() {
-    return (
-        <div>
-            <h1>OTHER</h1>
-  
-            <ul>
-                <li>
-                <Link href="/other/faq">FAQ</Link>
-            </li>
-            <li>
-                <Link href="/other/contact">Contact us</Link>
-            </li>
-            <li>
-                <Link href="/other/terms">Terms and conditions</Link>
-            </li>
-            </ul>
-        </div>
-    );
-}
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
-export default Other;
+
+const pages = {
+    contact: "/contact",
+    faq: "/faq",
+    terms: "/terms",
+  };
+
+  export default function Other() {
+  
+    return (
+      <div>
+          <nav className="flex items-center justify-center p-4">
+  
+            <ul className="flex gap-8">
+              {Object.entries(pages).map(([name, path]) => (
+                <li key={name}>
+                  <Link href={`other/${path}`}>{name}</Link>
+                </li>
+              ))}
+            </ul>
+            
+          </nav>
+          {/* {children} */}
+      </div>
+    );
+  }
