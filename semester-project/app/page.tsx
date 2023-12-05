@@ -1,7 +1,9 @@
-import Image from 'next/image'
+import HeroSection from "./_components/HeroSection";
 
 export default function Home() {
   return (
-    <h1>HOMEPAGE</h1>
-  )
+    <main className="flex flex-col justify-between items-center">
+      <HeroSection />
+    </main>
+  );
 }
