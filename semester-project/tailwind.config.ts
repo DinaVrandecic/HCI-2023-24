@@ -29,6 +29,10 @@ const config: Config = {
         },
         peach1: "#EBCFB2",
         brown1: "#695A5A",
+        blue1: "#25669C",
+        dark_blue: "#2A4F6E",
+        beige1: "#BFA890",
+        beige_text: "#EAE0DA",
         "brand-orange": {
           50: "#FFF5E6",
           600: "#E88C00",
