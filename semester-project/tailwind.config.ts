@@ -32,6 +32,7 @@ const config: Config = {
         blue1: "#25669C",
         dark_blue: "#2A4F6E",
         beige1: "#BFA890",
+        faded_beige: "#C5BAAF",
         beige_text: "#EAE0DA",
         "brand-orange": {
           50: "#FFF5E6",
