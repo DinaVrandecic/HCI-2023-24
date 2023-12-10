@@ -26,7 +26,7 @@ marginRight: '41px',
 
 export default function HeroSection() {
   return (
-    <section className="container flex justify-between items-center gap-10 w-screen relative">
+    <section className="container flex justify-between items-center gap-10 w-screen relative mb-[200px]">
       <div className="flex flex-1 w-1/2 flex-col justify-start gap-5 max-w-xl m-[50px]">
         <h1 className="font-playfair text-2xl font-extrabold text-blue1 whitespace-break-spaces">
           Your Ultimate Jewelry Destination
