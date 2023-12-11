@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import {cn} from "../lib/utils";
 import Image from "next/image";
-import logoImage  from "../public/pictures/logo.jpeg";
+import logoImage  from "../public/pictures/logo.png";
 
 interface NavbarProps {
   // Record of string keys and string values where each value is a path starting with a slash
@@ -19,7 +19,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
   return ( 
     <div>
     <div className="flex justify-between">
-      <div className="mx-[30px]">
+      <div className="mx-[30px] mt-[30px]">
       <Image
         src={logoImage}
         alt="Hero Image"

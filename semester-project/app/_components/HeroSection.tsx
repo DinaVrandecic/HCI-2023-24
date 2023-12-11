@@ -4,7 +4,6 @@ import heroImage1 from "../../public/pictures/hero.png";
 import styled from "styled-components";
 
 const RecktangleHero = styled.div`
-  font-family: Raleway, sans-serif;
   box-sizing: border-box;
   position: relative;
   background-color: #EBCFB2;
