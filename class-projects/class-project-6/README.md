@@ -3,4 +3,4 @@ https://hci-2023-24-19a5.vercel.app/
 # DESKTOP
 ![desktop](./desktop_prototype.png)
 # MOBILE
-![mobile](./mobile_prototype.png)
+![mobile](./phone_figma.png)
