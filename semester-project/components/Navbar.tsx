@@ -11,21 +11,20 @@ interface NavbarProps {
   pages: Record<string, `/${string}`>;
 }
 const baseClass =
-  "uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm text-brown1 bg-peach1 hover:bg-brown1 hover:text-peach1";
+"uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm text-dark_blue  hover:bg-brown1 hover:text-nf_blue";
 
 const Navbar: FC<NavbarProps> = ({ pages }) => {
   const pathName = usePathname();
 
   return ( 
     <div>
-    <div className="flex justify-between">
+    <div className="flex justify-between hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
       <div className="mx-[30px] mt-[30px]">
       <Image
         src={logoImage}
         alt="Hero Image"
         width={150} 
         height={150} 
-      
       />
       </div>
     <nav className="flex items-center justify-end px-20 py-10">
@@ -35,7 +34,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
             <Link href={path}>
               <span
                 className={cn(baseClass, {
-                  "bg-brown1 text-peach1 pointer-events-none":
+                  "bg-brown1 text-light_blue pointer-events-none":
                     path === pathName,
                 })}
               >
@@ -46,10 +45,8 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
         ))}
       </ul>
     </nav>
-
-
     </div>
-    <hr className="bg-brown1 h-0.5" />
+
     </div>
   );
 };
