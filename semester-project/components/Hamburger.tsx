@@ -14,7 +14,7 @@ interface HamburgerProps {
   pages: Record<string, `/${string}`>;
 }
 const baseClass =
-  "uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm text-brown1 bg-peach1 hover:bg-brown1 hover:text-peach1";
+  "uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm text-peach1 bg-nf_blue hover:bg-dark_blue hover:text-peach1";
 
 const Hamburger: FC<HamburgerProps> = ({ pages }) => {
   const pathName = usePathname();
@@ -73,7 +73,7 @@ const toggleMenu = () => {
       <div
         className={` ${
           isMenuOpen ? "absolute" : "hidden"
-        }  w-full top-10 left-0 bg-peach1 text-brown1 h-30 z-10`}
+        }  w-full top-10 left-0 bg-dark_blue text-peach1 h-30 z-10`}
       >
         <div className="flex flex-col justify-center items-center my-[20px]">
         <ul className="flex gap-2">
@@ -82,7 +82,7 @@ const toggleMenu = () => {
             <Link href={path}>
               <span
                 className={cn(baseClass, {
-                  "bg-brown1 text-peach1 pointer-events-none":
+                  "bg-dark_blue text-peach1 pointer-events-none":
                     path === pathName,
                 })}
               >

@@ -11,7 +11,7 @@ interface NavbarProps {
   pages: Record<string, `/${string}`>;
 }
 const baseClass =
-"uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm text-dark_blue  hover:bg-brown1 hover:text-nf_blue";
+"uppercase whitespace-nowrap font-serif text-base px-5 py-3 rounded-sm text-dark_blue  hover:bg-dark_blue hover:text-peach1";
 
 const Navbar: FC<NavbarProps> = ({ pages }) => {
   const pathName = usePathname();
@@ -34,7 +34,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
             <Link href={path}>
               <span
                 className={cn(baseClass, {
-                  "bg-brown1 text-light_blue pointer-events-none":
+                  "bg-dark_blue text-peach1 pointer-events-none":
                     path === pathName,
                 })}
               >
