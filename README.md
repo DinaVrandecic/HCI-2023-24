@@ -5,7 +5,8 @@ Latest Vercel deployment: https://hci-2023-24-19a5.vercel.app/
 - Osigurana responzivnost svih stranica, uređena navigacijska traka i footer, dodan 'About' page i 'Customer reviews' section.
 - Dodano da klik na 'Learn more' odvodi na 'About' page
 - Potrebno je dodatno urediti dimenzije recktanglea u Hero Sectionu i 'Shop all' button jer se poremeti style kada se doda a href="/shop" na njega
-- Treba urediti u mobilnu verziju 
+- Treba urediti u mobilnu verziju
+- Treba urediti Shop, Other, Login, Cart stranice
 
 ## [CLASS PROJECT #6](https://github.com/DinaVrandecic/HCI-2023-24/tree/main/class-projects/class-project-5)
 ## [CLASS PROJECT #5](https://github.com/DinaVrandecic/HCI-2023-24/tree/main/class-projects/class-project-6)
