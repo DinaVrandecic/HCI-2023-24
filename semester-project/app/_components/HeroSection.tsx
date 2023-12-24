@@ -8,13 +8,13 @@ const RecktangleHero = styled.div`
   position: relative;
   background-color: #EBCFB2;
   height: 740px;
-  margin-left: 200px;
+  margin-left: 150px;
   margin-top: 30px;
-  width: 600px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     margin-left: 0;
-    width: 100%;
+    width: calc(100% - 10px); 
+    max-width: 600px; 
   }
 `;
 
@@ -22,8 +22,8 @@ const PictureHero = styled.div`
   position: relative;
   display: block;
   margin: -600px 40px 0 auto;
-  width: 300px; /* Adjust the width as needed */
-  height: 505px; /* Adjust the height as needed */
+  width: 374px; /* Adjust the width as needed */
+  height: 631px; /* Adjust the height as needed */
   margin-right: 41px;
 
   @media (max-width: 768px) {
@@ -66,13 +66,13 @@ export default function HeroSection() {
           </a>
         </div>
       </ContentContainer>
-      <div className="flex-1 w-full lg:w-1/2">
+      <div className="flex-1 w-full">
         <RecktangleHero />
         <div className="relative">
           <Image
             src={heroImage1}
             alt="Hero Image"
-            className="block mt-[-695px] mr-[200px] w-full h-auto"
+            className="block mt-[-695px] mr-[200px] w-[650px] h-auto"
           />
         </div>
       </div>
