@@ -36,6 +36,7 @@ const config: Config = {
         beige_text: "#EAE0DA",
         nf_blue:"#84ACCD",
         light_blue:"#A3D6FF",
+        page_background:"#F7F5EB",
         "brand-orange": {
           50: "#FFF5E6",
           600: "#E88C00",

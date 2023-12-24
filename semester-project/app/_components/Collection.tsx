@@ -10,14 +10,14 @@ interface CollectionProps {
 const Collection: React.FC<CollectionProps> = ({ heroImage, button_text }) => (
   <div className="flex flex-col items-center">
     <div >
-      <div className="relative h-[200px] w-auto -ml-[30px] mr-[30px] -mb-[170px]  bg-peach1 box-border"></div>
       <div className="relative">
-      <Image
-        src={heroImage}
-        alt="Hero Image"
-        width={200} // Adjust the width as needed
-        height={200} // Adjust the height as needed
-      />
+        <Image
+          src={heroImage}
+          alt="Hero Image"
+          width={200} 
+          height={200} 
+        />
+        <div className="absolute w-full h-full -top-[30px] left-[30px] -z-10 bg-peach1"></div>
       </div>
 
     </div>
