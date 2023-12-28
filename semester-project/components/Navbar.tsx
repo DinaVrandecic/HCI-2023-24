@@ -18,7 +18,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
 
   return ( 
     <div>
-    <div className="flex justify-between hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
+    <div className=" justify-between hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
       <div className="mx-[30px] mt-[30px]">
       <Image
         src={logoImage}

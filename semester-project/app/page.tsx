@@ -4,7 +4,7 @@ import CustomerReviews from "./_components/CustomerReviews";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between items-center">
+    <main className="flex flex-col justify-between items-center -z-20 relative bg-page_background">
       <HeroSection />
       <CollectionSection />
       <CustomerReviews/>
