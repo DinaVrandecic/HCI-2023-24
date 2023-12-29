@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="container flex flex-col lg:flex-row justify-between items-center gap-10 w-screen relative mb-[200px] lg:px-10">
       <div className="flex-1 w-full max-w-[600px] flex flex-col gap-[5px] order-2 lg:order-1 md:order-1 md:m-[50px]">
-        <h1 className="font-serif text-6xl font-extrabold text-blue1 whitespace-break-spaces">
+        <h1 className="font-serif text-6xl font-extrabold text-blue1 ">
           Your Ultimate Jewelry Destination
         </h1>
         <p className="font-serif text-xl whitespace-break-spaces text-brown1">

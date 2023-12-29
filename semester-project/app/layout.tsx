@@ -43,7 +43,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+<body className={`${inter.className} bg-page_background`}>
+
 
       <Navbar pages={pages} />
       {/* <div className="hidden md:flex w-2/3 lg:flex lg:w-1/2 items-center justify-evenly">

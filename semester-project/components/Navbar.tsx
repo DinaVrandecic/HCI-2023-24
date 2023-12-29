@@ -17,9 +17,8 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
   const pathName = usePathname();
 
   return ( 
-    <div>
-    <div className=" justify-between hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
-      <div className="mx-[30px] mt-[30px]">
+    <div className=" justify-between sticky z-10 top-0 hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
+      <div className="mx-[10px] lg:mx-[30px] mt-[30px]">
       <Image
         src={logoImage}
         alt="Hero Image"
@@ -27,7 +26,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
         height={150} 
       />
       </div>
-    <nav className="flex items-center justify-end px-20 py-10">
+    <nav className="flex items-center justify-end lg:px-[80px] py-[40px]">
       <ul className="flex gap-2">
         {Object.entries(pages).map(([name, path]) => (
           <li key={name}>
@@ -45,8 +44,6 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
         ))}
       </ul>
     </nav>
-    </div>
-
     </div>
   );
 };
