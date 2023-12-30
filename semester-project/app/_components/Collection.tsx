@@ -14,15 +14,15 @@ const Collection: React.FC<CollectionProps> = ({ heroImage, button_text }) => (
         <Image
           src={heroImage}
           alt="Hero Image"
-          width={200} 
-          height={200} 
+          width={400} 
+          height={400} 
         />
         <div className="absolute w-full h-full -top-[30px] left-[30px] -z-10 bg-peach1"></div>
       </div>
 
     </div>
     
-    <button className="text-dark_blue bg-transparent border border:dark_blue hover:text-peach1 hover:bg-border-transparent p-[7px] m-[10px] rounded-sm">{button_text} </button>
+    <button className="text-dark_blue bg-peach1 p-[7px] m-[10px] rounded-sm font-serif">{button_text} </button>
   </div>
 );
 
