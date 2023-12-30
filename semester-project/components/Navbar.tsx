@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import {cn} from "../lib/utils";
 import Image from "next/image";
 import logoImage  from "../public/pictures/logo.png";
+import Search from "../components/Search"
 
 interface NavbarProps {
   // Record of string keys and string values where each value is a path starting with a slash
@@ -19,31 +20,32 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
   return ( 
     <div className=" justify-between sticky z-10 top-0 hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
       <div className="mx-[10px] lg:mx-[30px] mt-[30px]">
-      <Image
-        src={logoImage}
-        alt="Hero Image"
-        width={150} 
-        height={150} 
-      />
+        <Image
+          src={logoImage}
+          alt="Hero Image"
+          width={150} 
+          height={150} 
+        />
       </div>
-    <nav className="flex items-center justify-end lg:px-[80px] py-[40px]">
-      <ul className="flex gap-2">
-        {Object.entries(pages).map(([name, path]) => (
-          <li key={name}>
-            <Link href={path}>
-              <span
-                className={cn(baseClass, {
-                  "bg-dark_blue text-peach1 pointer-events-none":
-                    path === pathName,
-                })}
-              >
-                {name}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+      <Search></Search>
+      <nav className="flex items-center justify-end lg:px-[80px] py-[40px]">
+        <ul className="flex gap-2">
+          {Object.entries(pages).map(([name, path]) => (
+            <li key={name}>
+              <Link href={path}>
+                <span
+                  className={cn(baseClass, {
+                    "bg-dark_blue text-peach1 pointer-events-none":
+                      path === pathName,
+                  })}
+                >
+                  {name}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 };
