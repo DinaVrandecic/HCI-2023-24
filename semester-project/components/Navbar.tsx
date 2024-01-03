@@ -6,6 +6,7 @@ import {cn} from "../lib/utils";
 import Image from "next/image";
 import logoImage  from "../public/pictures/logo.png";
 import Search from "../components/Search"
+import Dropdown from "./DropdownButton"
 
 interface NavbarProps {
   // Record of string keys and string values where each value is a path starting with a slash
@@ -44,6 +45,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
               </Link>
             </li>
           ))}
+          {/* <Dropdown></Dropdown> */}
         </ul>
       </nav>
     </div>

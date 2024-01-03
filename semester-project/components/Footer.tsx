@@ -3,7 +3,7 @@ import logoImage from "../public/pictures/logo.png";
 
 export default function Footer() {
   return (
-    <div className="bg-nf_blue py-8 mt-20">
+    <div className="bg-nf_blue py-8 mt-20 w-full">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="p-8 text-center md:text-left">
