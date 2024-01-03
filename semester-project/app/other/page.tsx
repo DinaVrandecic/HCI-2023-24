@@ -15,7 +15,7 @@ const pages = {
       <div>
           <nav>
             <h3 className="flex items-center justify-center">OTHER</h3>
-            <ul className="flex gap-8 flex items-center justify-center p-4">
+            <ul className="flex gap-8 items-center justify-center p-4">
               {Object.entries(pages).map(([name, path]) => (
                 <li key={name}>
                   <Link href={`other/${path}`}>{name}</Link>
