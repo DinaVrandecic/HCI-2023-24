@@ -91,12 +91,15 @@
 
 import { useState } from 'react';
 import Link from "next/link";
+import {cn} from "../lib/utils";
+import { usePathname } from 'next/navigation'
 
 interface DropdownProps {
   link: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ link }) => {
+  const pathName = usePathname();
   const [showDropdown, setShowDropdown] = useState(false);
 
   const items = ['Earrings', 'Rings', 'Bracelets', 'Necklaces'];
@@ -107,7 +110,10 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   return (
     <div className="relative inline-block">
       <a
-        className={baseClass}
+                  className={cn(baseClass, {
+                    "bg-dark_blue text-peach1 pointer-events-none":
+                      link === pathName,
+                  })}
         onClick={() => setShowDropdown(!showDropdown)}
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}

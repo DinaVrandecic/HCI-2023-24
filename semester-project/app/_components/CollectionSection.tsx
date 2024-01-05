@@ -3,6 +3,7 @@ import Collection from "./Collection";
 import heroImage1 from "../../public/pictures/ring.png";
 import heroImage2 from "../../public/pictures/earring.png";
 import heroImage3 from "../../public/pictures/chains.png";
+import Link from "next/link";
 
 const CollectionSection = () => (
   <div className="w-full">
@@ -12,9 +13,9 @@ const CollectionSection = () => (
       <Collection heroImage={heroImage3} button_text="NECKLACES" />
     </div>
     <div className="flex justify-center mr-[30px]">
-      <button className=" font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[7px] m-[10px] rounded-sm">
+      <Link href="/shop" className=" font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[7px] m-[10px] rounded-sm">
         SHOP ALL
-      </button>
+      </Link>
     </div>
   </div>
 );
