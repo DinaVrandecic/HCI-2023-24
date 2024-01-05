@@ -59,11 +59,11 @@ const toggleMenu = () => {
 
 
 
-    <div className=" hover:cursor-pointer">
-      <div className="flex bg-nf_blue">
+    <div className=" hover:cursor-pointer md:hidden lg:hidden">
+      <div className="flex bg-nf_blue ">
         <div
           onClick={toggleMenu}
-          className="p-5 bg-nf_blue md:hidden lg:hidden flex flex-col gap-1 justify-around"
+          className="p-5 bg-nf_blue  flex flex-col gap-1 justify-around"
         >
           <div className="transition-all origin-center w-6 h-1 bg-brown1"></div>
           <div className="transition-all origin-center w-6 h-1 bg-brown1"></div>
