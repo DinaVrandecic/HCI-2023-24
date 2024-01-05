@@ -21,12 +21,16 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
   return ( 
     <div className=" justify-between sticky z-10 top-0 hidden md:flex lg:flexg:w-1/2l bg-nf_blue mb-15">
       <div className="mx-[10px] lg:mx-[30px] mt-[30px]">
-        <Image
+        <Link legacyBehavior href="/">
+        <a>
+          <Image
           src={logoImage}
           alt="Hero Image"
           width={150} 
           height={150} 
-        />
+         />
+        </a>
+        </Link>
       </div>
       <Search></Search>
       <nav className="flex items-center justify-end lg:px-[80px] py-[40px]">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logoImage from "../public/pictures/logo.png";
-
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-nf_blue py-8 mt-20 w-full">
@@ -8,7 +8,16 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="p-8 text-center md:text-left">
             <div className="flex justify-center md:justify-start">
-              <Image src={logoImage} alt="Hero Image" width={150} height={150} />
+            <Link legacyBehavior href="/">
+        <a>
+          <Image
+          src={logoImage}
+          alt="Hero Image"
+          width={150} 
+          height={150} 
+         />
+        </a>
+        </Link>
             </div>
             <p className="font-serif text-faded_beige mt-2 mb-3">copyright © 2023</p>
             <p className="text-dark_blue font-bold font-serif">

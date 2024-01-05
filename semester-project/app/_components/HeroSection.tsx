@@ -9,8 +9,8 @@ export default function HeroSection() {
         <h1 className="font-serif text-6xl font-extrabold text-blue1 ">
           Your Ultimate Jewelry Destination
         </h1>
-        <p className="font-serif text-xl whitespace-break-spaces text-brown1">
-        Discover the essence of timeless elegance shimmering through every piece at Elina. From delicate necklaces to intricate bracelets, embark on our journey. At Elina, we encapsulate the allure of sophistication and affordability, ensuring each piece reflects your unique style effortlessly.
+        <p className="font-serif text-xl whitespace-break-spaces text-brown1 mt-7">
+        Discover the essence of timeless elegance shimmering through every piece at Elina. From delicate necklaces to intricate bracelets, we invite you to join us on an exciting and sparkling journey. At Elina, we offer sophistication and affordability, ensuring that every piece reflects your unique style.
         </p>
         <div className="flex items-center justify-center mt-[40px]">
           <a href="/about">

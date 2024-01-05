@@ -122,7 +122,7 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
       </a>
       {showDropdown && (
         <div
-          className="absolute z-10 bg-white mt-[10px] py-1 w-40 shadow-lg hover:cursor-pointer"
+          className="absolute z-10 bg-nf_blue mt-[10px] py-1 w-40 shadow-lg hover:cursor-pointer"
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >

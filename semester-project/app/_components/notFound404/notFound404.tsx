@@ -16,7 +16,7 @@ const NotFound404: React.FC = () => {
             <p className="mt-4 text-lg text-dark_blue text-serif font-serif">
               Looks like this page is as elusive as your favorite earring that always manages to disappear!
               <br />
-              Don't worry, our jewelry might be hard to find, but your way back isn't.
+              Fear not, we're polishing up this page to be as radiant as our jewelry.
               <br />
             </p>
             <a href="/">
