@@ -90,29 +90,42 @@
 // }
 
 import { useState } from 'react';
+import Link from "next/link";
 
-const Dropdown = () => {
+interface DropdownProps {
+  link: string;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const items = ['Earrings', 'Rings', 'Bracelets', 'Necklaces'];
 
+  const baseClass =
+    'uppercase whitespace-nowrap font-serif text-base px-5 py-3 rounded-sm text-dark_blue hover:bg-dark_blue hover:text-peach1 hover:cursor-pointer';
+
   return (
     <div className="relative inline-block">
       <a
-        className="text-black px-3 py-2 bg-dark_blue inline-block"
+        className={baseClass}
         onClick={() => setShowDropdown(!showDropdown)}
+        onMouseEnter={() => setShowDropdown(true)}
+        onMouseLeave={() => setShowDropdown(false)}
       >
-        BRANDS
+          SHOP
       </a>
       {showDropdown && (
-        <div className="absolute z-10 bg-white mt-1 py-1 w-40 shadow-lg">
+        <div
+          className="absolute z-10 bg-white mt-[10px] py-1 w-40 shadow-lg hover:cursor-pointer"
+          onMouseEnter={() => setShowDropdown(true)}
+          onMouseLeave={() => setShowDropdown(false)}
+        >
           {items.map((item, index) => (
-            <a
-              className="text-black px-3 py-2 block hover:bg-peach1"
-              key={index}
-            >
+            <Link 
+              href={link}
+              className="text-dark_blue px-3 py-2 block hover:bg-dark_blue hover:text-peach1" key={index}>
               {item}
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -121,3 +134,5 @@ const Dropdown = () => {
 };
 
 export default Dropdown;
+
+

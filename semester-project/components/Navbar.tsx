@@ -31,21 +31,36 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
       <Search></Search>
       <nav className="flex items-center justify-end lg:px-[80px] py-[40px]">
         <ul className="flex gap-2">
-          {Object.entries(pages).map(([name, path]) => (
-            <li key={name}>
-              <Link href={path}>
-                <span
-                  className={cn(baseClass, {
-                    "bg-dark_blue text-peach1 pointer-events-none":
-                      path === pathName,
-                  })}
-                >
-                  {name}
-                </span>
-              </Link>
-            </li>
-          ))}
-          {/* <Dropdown></Dropdown> */}
+        {Object.entries(pages).map(([name, path]) => (
+  <li key={name}>
+    {name === 'shop' ? (
+      <>
+        {/* <Link href={path}>
+          <span
+            className={cn(baseClass, {
+              "bg-dark_blue text-peach1 pointer-events-none":
+                path === pathName,
+            })}
+          >
+            {name}
+          </span>
+        </Link> */}
+        <Dropdown link={path}/>
+      </>
+    ) : (
+      <Link href={path}>
+        <span
+          className={cn(baseClass, {
+            "bg-dark_blue text-peach1 pointer-events-none":
+              path === pathName,
+          })}
+        >
+          {name}
+        </span>
+      </Link>
+    )}
+  </li>
+))}
         </ul>
       </nav>
     </div>

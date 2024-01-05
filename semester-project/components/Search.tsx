@@ -6,7 +6,7 @@ export default function Search() {
             <div className="flex ">
                 <input
                     type="text"
-                    className="block w-full px-4 py-2 text-brown1 bg-page_background focus:ring-peach1 focus:outline-none focus:ring focus:ring-opacity-70"
+                    className="block w-[80px] lg:w-full p-[3px] lg:px-4 py-2 text-brown1 bg-page_background focus:ring-peach1 focus:outline-none focus:ring focus:ring-opacity-70"
                     placeholder="Search..."
                 />
                 <button className="px-4 text-peach1 bg-dark_blue  ">

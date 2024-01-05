@@ -4,7 +4,7 @@ import Card from "./Card";
 export default function Shop(){
   return (
     <div className="container mx-auto md:p-8">
-      <h1 className="text-3xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px]">Earrings</h1>
+      <h1 className="text-3xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px]">Rings</h1>
       
       <div className="flex justify-center">
         <section className="grid md:grid-cols-2 lg:grid-cols-3">

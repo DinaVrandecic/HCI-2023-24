@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 const pages: Record<string, `/${string}`> = {
   home: "/",
   shop: "/shop",
-  other: "/other",
   login: "/login",
   cart: "/cart",
   about: "/about",
