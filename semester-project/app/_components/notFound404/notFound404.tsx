@@ -13,7 +13,7 @@ const NotFound404: React.FC = () => {
           <div className="text-left items-center lg:text-center lg:items-start">
             <h1 className="text-6xl font-bold font-serif text-peach1 mb-2">404</h1>
             <p className="mt-2 text-2xl font-medium font-serif font-bold text-dark_blue">Page Not Found</p>
-            <p className="mt-4 text-lg text-dark_blue text-serif font-serif">
+            <p className="mt-4 text-lg text-dark_bl ue text-serif font-serif">
               Looks like this page is as elusive as your favorite earring that always manages to disappear!
               <br />
               Don't worry, our jewelry might be hard to find, but your way back isn't.
