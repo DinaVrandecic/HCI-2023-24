@@ -37,12 +37,12 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
         <ul className="flex flex-col justify-center items-start  my-[20px] "
         >
           {Object.entries(items).map(([name, path]) =>  (
-            <li>
+            <li key={name
+            }>
                 <Link 
                     href={link}
                     className={`text-brown1 px-3 py-2 block ml-[20px] hover:bg-dark_blue  hover:text-peach1` //add inside of classes
                     }
-                    key={path}
 >
                     {name}
                 </Link>
