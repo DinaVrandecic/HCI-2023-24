@@ -6,7 +6,7 @@ import {cn} from "../lib/utils";
 import Image from "next/image";
 import logoImage  from "../public/pictures/logo.png";
 import React, { useState } from "react";
-import Dropdown from "./DropdownButton"
+import DropdownPhone from "./DropdownPhone"
 
 
 interface HamburgerProps {
@@ -67,13 +67,13 @@ const toggleMenu = () => {
                       {name}
                     </span>
                   </Link> */}
-                  <Dropdown link={path}/>
+                  <DropdownPhone link={path}/>
                 </>
               ) : (
                 <Link href={path}>
                   <span
                     className={cn(baseClass, {
-                      "bg-dark_blue text-peach1 pointer-events-none":
+                      "bg-dark_blue text-peach1 ":
                         path === pathName,
                     })}
                   >
@@ -90,6 +90,26 @@ const toggleMenu = () => {
   );
 };
 export default Hamburger;
+
+
+
+
+
+// {Object.entries(pages).map(([name, path]) => (
+//   <li key={name}>
+//     <Link href={path}>
+//       <span
+//         className={cn(baseClass, {
+//           "bg-dark_blue text-peach1 pointer-events-none":
+//             path === pathName,
+//         })}
+//       >
+//         {name}
+//       </span>
+//     </Link>
+//   </li>
+// ))}
+
 
 
 
