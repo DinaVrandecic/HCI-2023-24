@@ -5,15 +5,15 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-page_background">
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full max-w-screen-xl">
         {/* Login Section */}
-        <div className="bg-peach1 p-8 rounded shadow-md w-full md:w-1/2 md:h-72">
-          <h2 className="text-2xl font-bold font-serif text-dark_blue mb-4">LOGIN</h2>
+        <div className="bg-peach1 p-8  shadow-md w-full md:w-1/2 md:h-72">
+          <h2 className="text-2xl font-bold font-serif text-dark_blue mb-4">We've already met? Login here!</h2>
           <form className="flex flex-col h-full">
             <div className="mb-4">
               <label className="block text-dark_blue text-sm font-bold mb-2" htmlFor="email">
                 Email
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none   w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
                 placeholder="Enter your email"
@@ -24,7 +24,7 @@ const Login = () => {
                 Password
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="password"
                 type="password"
                 placeholder="Enter your password"
@@ -33,7 +33,8 @@ const Login = () => {
             <div className="flex-grow"></div>
             <div className="flex items-start justify-start">
               <button
-                className="bg-dark_blue hover:bg-nf_blue text-peach1 hover:text-dark_blue font-bold font-serif py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-dark_blue shadow-md hover:bg-nf_blue text-peach1 hover:text-dark_blue font-bold font-serif py-2 px-4 mb-20 focus:outline-none focus:shadow-outline "
+                style={{ marginBottom: "45px" }}
                 type="button"
               >
                 Login
@@ -42,15 +43,15 @@ const Login = () => {
           </form>
         </div>
         {/* Signup Section */}
-        <div className="bg-peach1 p-8 rounded shadow-md w-full md:w-1/2">
-          <h2 className="text-2xl font-bold font-serif text-dark_blue mb-4">SIGN UP</h2>
+        <div className="bg-peach1 p-8  shadow-md w-full md:w-1/2">
+          <h2 className="text-2xl font-bold font-serif text-dark_blue mb-4">We haven't met yet? Sign up!</h2>
           <form>
             <div className="mb-4">
               <label className="block text-dark_blue text-sm font-bold mb-2" htmlFor="name">
                 Name
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 placeholder="Enter your name"
@@ -61,7 +62,7 @@ const Login = () => {
                 Surname
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="surname"
                 type="text"
                 placeholder="Enter your surname"
@@ -72,7 +73,7 @@ const Login = () => {
                 Email
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="emailSignup"
                 type="email"
                 placeholder="Enter your email"
@@ -83,7 +84,7 @@ const Login = () => {
                 Password
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="passwordSignup"
                 type="password"
                 placeholder="Enter your password"
@@ -94,7 +95,7 @@ const Login = () => {
                 Confirm Password
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none  w-full py-2 px-3 text-nf_blue leading-tight focus:outline-none focus:shadow-outline"
                 id="confirmPassword"
                 type="password"
                 placeholder="Confirm your password"
@@ -102,7 +103,7 @@ const Login = () => {
             </div>
             <div className="flex items-center justify-between">
               <button
-                className="bg-dark_blue hover:bg-nf_blue text-peach1 hover:text-dark_blue font-bold font-serif py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-dark_blue hover:bg-nf_blue text-peach1 hover:text-dark_blue font-bold font-serif py-2 px-4 shadow-md focus:outline-none focus:shadow-outline"
                 type="button"
               >
                 Sign Up
