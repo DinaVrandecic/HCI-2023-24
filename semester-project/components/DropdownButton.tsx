@@ -102,7 +102,13 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   const pathName = usePathname();
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const items = ['Earrings', 'Rings', 'Bracelets', 'Necklaces'];
+  const items: Record<string, `/${string}`> = {
+    Earrings: "/shop",
+    Rings: "/shop",
+    Bracelets: "/shop",
+    Necklaces: "/shop",
+
+  }; 
 
   const baseClass =
     'uppercase whitespace-nowrap font-serif text-base px-5 py-3 rounded-sm text-dark_blue hover:bg-dark_blue hover:text-peach1 hover:cursor-pointer';
@@ -111,7 +117,7 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
     <div className="relative inline-block">
       <a
                   className={cn(baseClass, {
-                    "bg-dark_blue text-peach1 pointer-events-none":
+                    "bg-dark_blue text-peach1":
                       link === pathName,
                   })}
         onClick={() => setShowDropdown(!showDropdown)}
@@ -126,11 +132,14 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >
-          {items.map((item, index) => (
+          {Object.entries(items).map(([name, path]) =>  (
             <Link 
-              href={link}
-              className="text-dark_blue px-3 py-2 block hover:bg-dark_blue hover:text-peach1" key={index}>
-              {item}
+            href={link}
+            className={`text-dark_blue px-3 py-2 block hover:bg-dark_blue  hover:text-peach1` //add inside of classes
+            }
+            key={path}
+>
+              {name}
             </Link>
           ))}
         </div>
@@ -142,3 +151,6 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
 export default Dropdown;
 
 
+//***************************add this when contentful is done************************************
+// ${path === pathName ? 'bg-dark_blue text-peach1' : ''
+// }

@@ -6,7 +6,7 @@ import {cn} from "../lib/utils";
 import Image from "next/image";
 import logoImage  from "../public/pictures/logo.png";
 import React, { useState } from "react";
-
+import Dropdown from "./DropdownButton"
 
 
 interface HamburgerProps {
@@ -25,40 +25,6 @@ const toggleMenu = () => {
 };
 
   return ( 
-    // <div>
-    // <div className="flex justify-between hidden md:flex lg:flexg:w-1/2l ">
-    //   <div className="mx-[30px] mt-[30px]">
-    //   <Image
-    //     src={logoImage}
-    //     alt="Hero Image"
-    //     width={150} 
-    //     height={150} 
-    //   />
-    //   </div>
-    // <nav className="flex items-center justify-end px-20 py-10">
-    //   <ul className="flex gap-2">
-    //     {Object.entries(pages).map(([name, path]) => (
-    //       <li key={name}>
-    //         <Link href={path}>
-    //           <span
-    //             className={cn(baseClass, {
-    //               "bg-brown1 text-peach1 pointer-events-none":
-    //                 path === pathName,
-    //             })}
-    //           >
-    //             {name}
-    //           </span>
-    //         </Link>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </nav>
-    // </div>
-
-    // </div>
-
-
-
     <div className=" hover:cursor-pointer md:hidden lg:hidden">
       <div className="flex bg-nf_blue ">
         <div
@@ -89,18 +55,34 @@ const toggleMenu = () => {
         <ul className="flex  flex-col justify-center items-center my-[20px] gap-[30px]">
           {Object.entries(pages).map(([name, path]) => (
             <li key={name}>
-              <Link href={path}>
-                <span
-                  className={cn(baseClass, {
-                    "bg-dark_blue text-peach1 pointer-events-none":
-                      path === pathName,
-                  })}
-                >
-                  {name}
-                </span>
-              </Link>
+              {name === 'shop' ? (
+                <>
+                  {/* <Link href={path}>
+                    <span
+                      className={cn(baseClass, {
+                        "bg-dark_blue text-peach1 pointer-events-none":
+                          path === pathName,
+                      })}
+                    >
+                      {name}
+                    </span>
+                  </Link> */}
+                  <Dropdown link={path}/>
+                </>
+              ) : (
+                <Link href={path}>
+                  <span
+                    className={cn(baseClass, {
+                      "bg-dark_blue text-peach1 pointer-events-none":
+                        path === pathName,
+                    })}
+                  >
+                    {name}
+                  </span>
+                </Link>
+              )}
             </li>
-          ))}
+  ))}
         </ul>
         </div>
       </div>

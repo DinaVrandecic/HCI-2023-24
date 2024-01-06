@@ -55,7 +55,7 @@ const Navbar: FC<NavbarProps> = ({ pages }) => {
       <Link href={path}>
         <span
           className={cn(baseClass, {
-            "bg-dark_blue text-peach1 pointer-events-none":
+            "bg-dark_blue text-peach1":
               path === pathName,
           })}
         >
