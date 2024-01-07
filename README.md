@@ -1,11 +1,12 @@
 # ELINA JEWELRY WEBSHOP by Dina & Ela
 Latest Vercel deployment: https://hci-2023-24-19a5.vercel.app/ 
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 2/4
-- Dodan Shop, Cart i Login page
-- Uređen rectangle u Hero Sectionu i 'Shop all' button
-- Napravljen Not Found page i Search u nav.traci
-- Popravci na mobilnoj verziji. Dodan dropdown u 'Shop' pageu
-- Potrebno je urediti proizvode i kategorije u Shop pageu
+- Dodan Shop, Cart, Login i Not Found page
+- Uređeni svi recktangle-ovi (velik problem koji je riješen ovaj tjedan)
+- U header je dodan Search i dropdown za botun Shop
+- Poboljšana responzivnost mobilne verzije
+- Popravljen Hamburger u mobilnoj verziji
+- Sljedeći tjedan: napraviti contentful
   
   
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 1/4
