@@ -3,8 +3,10 @@ Latest Vercel deployment: https://hci-2023-24-19a5.vercel.app/
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 2/4
 - Dodan Shop, Cart i Login page
 - Uređen rectangle u Hero Sectionu i 'Shop all' button
+- Napravljen Not Found page
 - Popravci na mobilnoj verziji. Dodan dropdown u 'Shop' pageu
-- Potrebno je urediti proizvode i kategorije u Shop pageu 
+- Potrebno je urediti proizvode i kategorije u Shop pageu
+  
   
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 1/4
 
