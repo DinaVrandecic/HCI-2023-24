@@ -7,8 +7,8 @@ export default function About() {
     <div className="container mx-auto p-4 md:p-8">
       <h1 className="text-3xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif">About us</h1>
 
-      <section className="flex flex-col md:flex-row  items-center justify-around mb-8 my-[50px]">
-        <div className=" mb-4 mt-8 md:mb-0 relative order-2 md:order-1">
+      <section className="flex flex-col md:flex-row  items-center justify-around mb-8 my-[50px] ">
+        <div className=" mb-4 mt-8 md:mb-0 relative order-2 md:order-1 mr-[30px] md:mr-[0px]">
           <Image
             src={eid} 
             alt="Ela and Dina"
@@ -37,7 +37,7 @@ export default function About() {
 
           <p className="mb-4 font-serif text-brown1">Whether you're looking for a timeless piece or a trendy accessory to elevate your look, we have something for every style and occasion. Our commitment is to empower individuals to express themselves through affordable and modern jewelry that inspires confidence and joy.</p>
         </div>
-        <div className="mb-4 mt-8 md:mb-0 md:ml-28 relative">
+        <div className="mb-4 mt-8 md:mb-0 md:ml-28 relative mr-[30px] md:mr-[0px]">
           <Image
             src={vision}
             alt="Our Vision"
