@@ -2,7 +2,7 @@
 Latest Vercel deployment: https://hci-2023-24-19a5.vercel.app/ 
 
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 4/4
--Implementacija contentful-a
+- Implementacija contentful-a
 
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 3/4
 
