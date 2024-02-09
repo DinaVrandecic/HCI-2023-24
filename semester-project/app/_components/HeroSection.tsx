@@ -14,7 +14,7 @@ export default function HeroSection() {
         </p>
         <div className="flex items-center justify-center mt-[40px]">
           <a href="/about">
-            <button className="font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[7px] m-[10px] rounded-sm ">
+            <button className="font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[15px] m-[10px] rounded-sm ">
               LEARN MORE
             </button>
           </a>
