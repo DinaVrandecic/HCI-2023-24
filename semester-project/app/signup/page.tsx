@@ -63,7 +63,7 @@ const SignUp = () => {
               />
             </div>
             <div className='my-[10px]'>
-              <Link href="/login" className=" font-serif text-peach1 bg-dark_blue hover:peach1 hover:bg-blue1 p-[7px]  rounded-sm">
+              <Link href="/login" className=" font-serif text-peach1 bg-dark_blue hover:peach1 hover:bg-blue1 p-[15px]  rounded-sm">
                 SIGN UP
               </Link>
             </div>
@@ -72,7 +72,7 @@ const SignUp = () => {
         <div className='mt-[30px]'>
           <p className="font-serif text-brown1">We've already met?</p>
           <div className='flex justify-center my-[10px]'>
-              <Link href="login" className=" font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[7px]  rounded-sm">
+              <Link href="login" className=" font-serif text-peach1 bg-dark_blue hover:text-dark_blue hover:bg-peach1 p-[15px]  rounded-sm">
                 LOG IN
               </Link>
             </div>
