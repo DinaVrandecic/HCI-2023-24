@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import ep from "@/public/pictures/ep.png";
+import ep from "../public/pictures/ep.png";
 
-export default function NotFound404(){
+export default function NotFound(){
   return (
     <div className="container mx-auto p-4 md:p-8">
         <section className="flex flex-col md:flex-row  items-center justify-around mb-8 my-[50px]">
