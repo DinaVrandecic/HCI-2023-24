@@ -1,9 +1,9 @@
 
-
 import { useState } from 'react';
 import Link from "next/link";
 import {cn} from "../lib/utils";
 import { usePathname } from 'next/navigation'
+
 
 interface DropdownProps {
   link: string;
@@ -14,10 +14,10 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const items: Record<string, `/${string}`> = {
-    Earrings: "/shop",
-    Rings: "/shop",
-    Bracelets: "/shop",
-    Necklaces: "/shop",
+    earring: "/earrings",
+    ring: "/rings",
+    bracelet: "/bracelets",
+    necklace: "/necklaces",
 
   }; 
 
@@ -45,13 +45,14 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
         >
           {Object.entries(items).map(([name, path]) =>  (
             <Link 
-            href={link}
+            href={"/shop/"+ name}
             className={`text-dark_blue px-3 py-2 block hover:bg-dark_blue  hover:text-peach1` //add inside of classes
             }
             key={path}
 >
               {name}
             </Link>
+
           ))}
         </div>
       )}
