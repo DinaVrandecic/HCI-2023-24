@@ -6,20 +6,20 @@ function ShoppingCartPage() {
   return (
     <div className="container-fluid mt-5 px-4">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-6 d-flex align-items-center justify-content-center">
           <div className="card">
             <div className="card-header">
               <h1 className="text-center text-3xl font-bold font-serif text-dark_blue">My Cart</h1>
             </div>
             <div className="card-body cart">
               <div className="flex flex-col justify-center items-center text-center">
-                <div className="mb-[40px] mt-[60px] relative mr-[30px] ">
+                <div className="mb-[40px] mt-[60px] relative mr-[30px]">
                   <Image
                     src={cart}
                     alt="Our Vision"
                     width={280}
                     height={300}
-                    className="object-cover "
+                    className="object-cover"
                   />
                   <div className="absolute w-full h-full -top-[30px] left-[30px] -z-10 bg-peach1"></div>
                 </div>
@@ -35,11 +35,11 @@ function ShoppingCartPage() {
           </div>
         </div>
 
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
+        <div className="col-md-6 d-flex  align-items-center justify-start">
+
+            <div className="card-body justify-start">
               {/* Payment Method Section */}
-              <div className="mt-[50px]">
+              <div className="pl-3 text-center">
                 <h2 className="text-2xl font-bold font-serif text-dark_blue mb-3">Payment Methods</h2>
                 <p className="text-brown1 font-serif mb-3">
                   We accept the following payment methods for your jewelry purchases:
@@ -55,9 +55,9 @@ function ShoppingCartPage() {
               </div>
 
               {/* Delivery Information Section */}
-              <div className="mt-[50px]">
+              <div className="mt-[50px] text-center">
                 <h2 className="text-2xl font-bold font-serif text-dark_blue mb-3">Delivery Information</h2>
-                <p className="text-brown1 font-serif mb-3">
+                <p className="text-brown1 font-serif mb-3 ">
                   We partnered with the best delivery companies so you could enjoy a fast and reliable delivery of your goods:
                 </p>
                 <ul className="list-disc list-inside text-brown1 font-bold font-serif">
@@ -70,7 +70,7 @@ function ShoppingCartPage() {
                 </p>
               </div>
             </div>
-          </div>
+        
         </div>
       </div>
     </div>
