@@ -1,29 +1,91 @@
-import React from "react";
+"use client"
+import React, {useState, useEffect}from "react";
 import Card from "./Card";
+import { fetchGraphQL } from "@/lib/contentfulFetch";
+
+const space_id = "w4hubm46n8vc"
+const access_token = "N45HXFp-MbSa4GvLTotphSM4O3Ey5jCx9Qvb8-9p5PE";
+
+interface Product {
+  category: string;
+  name: string;
+  price: string;
+  picture: {
+    id: number;
+    title: string;
+    description: string;
+    contentType: string;
+    url: string;
+  };
+}
 
 export default function Shop(){
+  const query = `
+  query {
+    productCollection (where: {name_contains: "necklace"}) {
+      items {
+        name
+        price
+        category
+        picture {
+          title
+          description
+          contentType
+          url
+        }
+      }
+    }
+  }
+  `;
+
+  const [products, setProducts] = useState<Product[]>([])
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetchGraphQL(query, space_id, access_token);
+      const data = await response.json();
+      console.log(data.data.productCollection.items)
+      setProducts(data.data.productCollection.items);
+    } catch (error) {
+      console.error("Error fetching Contentful data:", error);
+    } 
+  };
+
+  fetchData();
+}, []);
+
+const productData = {
+  imageUrl: "/pictures/ring.png",
+  title: "RingEarring",
+  price: "5.00",
+};
+
+const handleAddToCart = () => {
+  // Handle adding to cart logic
+  console.log("Added to cart:", productData.title);
+};
   return (
     <div className="container mx-auto md:p-8">
       <h1 className="text-3xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px]">Rings</h1>
       
       <div className="flex justify-center">
         <section className="grid md:grid-cols-2 lg:grid-cols-3">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          {products.map((product, item)=>(
+                    <Card
+                    imageUrl={product.picture.url}
+                    title={product.name}
+                    price={product.price}
+                    onAddToCart={handleAddToCart}
+                    key={item}
+                  />
+          ))}
+
         </section>
       </div>
     </div>
   );
 }
-
-
-
-
 
 
 
