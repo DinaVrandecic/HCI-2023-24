@@ -12,15 +12,16 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const items: Record<string, `/${string}`> = {
-    Earrings: "/shop",
-    Rings: "/shop",
-    Bracelets: "/shop",
-    Necklaces: "/shop",
+    earring: "/earrings",
+    ring: "/rings",
+    bracelet: "/bracelets",
+    necklace: "/necklaces",
 
-  }; 
+  };  
 
   const baseClass =
     'uppercase whitespace-nowrap font-serif text-base px-5 py-3 rounded-sm text-dark_blue hover:bg-dark_blue hover:text-peach1 hover:cursor-pointer';
+
 
   return (
     <div className=" inline-block">
@@ -40,11 +41,13 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
             <li key={name
             }>
                 <Link 
-                    href={link}
-                    className={`text-brown1 px-3 py-2 block ml-[20px] hover:bg-dark_blue  hover:text-peach1` //add inside of classes
-                    }
+                    href={"/shop/"+ name}
+                    className={cn({"text-brown1 px-3 py-2 block ml-[20px] hover:bg-dark_blue  hover:text-peach1": " "}, {
+                      "bg-dark_blue text-peach1 ":
+                      `/shop/${name}` === pathName,
+                    })}
 >
-                    {name}
+                    {name[0].toUpperCase() + name.slice(1) + "s"}
                 </Link>
             </li>
 

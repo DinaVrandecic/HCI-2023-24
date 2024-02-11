@@ -28,7 +28,7 @@ interface pageProps {
 function Page({ params }: pageProps){
     if (typeof window !== "undefined") {
         document.title =
-          "ELINA - " + params.category;
+          "ELINA - " + params.category[0].toUpperCase() + params.category.slice(1);
       }
   const query = `
   query {
@@ -77,7 +77,7 @@ const handleAddToCart = () => {
 };
   return (
     <div className="container mx-auto md:p-8">
-      <h1 className="text-3xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px]">{params.category}</h1>
+      <h1 className="text-4xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px] mt-[30px]">{params.category[0].toUpperCase() + params.category.slice(1) + "s"}</h1>
       
       <div className="flex justify-center">
         <section className="grid md:grid-cols-2 lg:grid-cols-3">

@@ -50,7 +50,7 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
             }
             key={path}
 >
-              {name}
+              {name[0].toUpperCase() + name.slice(1) + "s"} 
             </Link>
 
           ))}
