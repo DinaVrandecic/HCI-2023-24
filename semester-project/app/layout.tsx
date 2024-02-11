@@ -22,7 +22,6 @@ const pages: Record<string, `/${string}`> = {
   about: "/about",
 }; 
 
-// ...
 
 <ul className="flex gap-8">
   {Object.entries(pages).map(([name, path]) => (
@@ -46,12 +45,6 @@ export default function RootLayout({
 
 
       <Navbar pages={pages} />
-      {/* <div className="hidden md:flex w-2/3 lg:flex lg:w-1/2 items-center justify-evenly">
-            <Link href="/products">Products</Link>
-            <Link href="/cart">Cart</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/login">Sign In</Link>
-          </div> */}
       <Hamburger pages={pages} />
         {children}
         <Footer />

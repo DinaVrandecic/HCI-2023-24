@@ -12,6 +12,7 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const items: Record<string, `/${string}`> = {
+    all: "/all",
     earring: "/earrings",
     ring: "/rings",
     bracelet: "/bracelets",
@@ -47,7 +48,13 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
                       `/shop/${name}` === pathName,
                     })}
 >
-                    {name[0].toUpperCase() + name.slice(1) + "s"}
+                    {name === "all" ? (
+                      // Render if params.category is "all"
+                      name[0].toUpperCase() + name.slice(1) + " products"
+                    ) : (
+                      // Render if params.category is not "all"
+                      name[0].toUpperCase() + name.slice(1) + "s"
+                    )}
                 </Link>
             </li>
 

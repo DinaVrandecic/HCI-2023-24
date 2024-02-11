@@ -30,23 +30,48 @@ function Page({ params }: pageProps){
         document.title =
           "ELINA - " + params.category[0].toUpperCase() + params.category.slice(1);
       }
-  const query = `
-  query {
-    productCollection (where: {name_contains: "${params.category}"}) {
-      items {
-        name
-        price
-        category
-        picture {
-          title
-          description
-          contentType
-          url
+
+      let query = "";
+
+      if (params.category === 'all') {
+        query = `
+        query {
+          productCollection {
+            items {
+              name
+              price
+              category
+              picture {
+                title
+                description
+                contentType
+                url
+              }
+            }
+          }
         }
+        `;
+
+      } else {
+         query = `
+        query {
+          productCollection (where: {name_contains: "${params.category}"}) {
+            items {
+              name
+              price
+              category
+              picture {
+                title
+                description
+                contentType
+                url
+              }
+            }
+          }
+        }
+        `;
+
       }
-    }
-  }
-  `;
 
   const [products, setProducts] = useState<Product[]>([])
 
@@ -75,10 +100,19 @@ const handleAddToCart = () => {
   // Handle adding to cart logic
   console.log("Added to cart:", productData.title);
 };
+
+
   return (
     <div className="container mx-auto md:p-8">
-      <h1 className="text-4xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px] mt-[30px]">{params.category[0].toUpperCase() + params.category.slice(1) + "s"}</h1>
-      
+      <h1 className="text-4xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px] mt-[30px]">
+      {params.category === "all" ? (
+        // Render if params.category is "all"
+        params.category[0].toUpperCase() + params.category.slice(1) + " products"
+      ) : (
+        // Render if params.category is not "all"
+        params.category[0].toUpperCase() + params.category.slice(1) + "s"
+      )}
+    </h1>
       <div className="flex justify-center">
         <section className="grid md:grid-cols-2 lg:grid-cols-3">
           {products.map((product, item)=>(
