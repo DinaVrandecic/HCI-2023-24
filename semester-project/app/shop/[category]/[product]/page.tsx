@@ -78,8 +78,8 @@ function Page({ params }: pageProps) {
   console.log(product)
 
   return (
-    <div className="container mx-auto md:p-8">
-      <h1 className="text-2xl md:text-4xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px] mt-[30px]">
+    <div >
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-dark_blue font-serif m-[20px] ">
           {product.name}
       </h1>
       <div className="flex justify-center">
