@@ -38,3 +38,7 @@ const Card: React.FC<CardProps> = ({imageUrl, title, price, onAddToCart }) => {
 };
 
 export default Card;
+
+
+
+

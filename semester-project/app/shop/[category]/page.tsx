@@ -1,9 +1,9 @@
 "use client"
-import React, {useState, useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import { fetchGraphQL } from "@/lib/contentfulFetch";
 
-const space_id = "w4hubm46n8vc"
+const space_id = "w4hubm46n8vc";
 const access_token = "N45HXFp-MbSa4GvLTotphSM4O3Ey5jCx9Qvb8-9p5PE";
 
 interface Product {
@@ -20,21 +20,20 @@ interface Product {
 }
 
 interface pageProps {
-    params: {
-      category: string;
-    };
-  }
+  params: {
+    category: string;
+  };
+}
 
-function Page({ params }: pageProps){
-    if (typeof window !== "undefined") {
-        document.title =
-          "ELINA - " + params.category[0].toUpperCase() + params.category.slice(1);
-      }
+function Page({ params }: pageProps) {
+  const [redirectToNotFound, setRedirectToNotFound] = useState<boolean>(false);
+  const [products, setProducts] = useState<Product[]>([]);
 
-      let query = "";
+  useEffect(() => {
+    let query = "";
 
-      if (params.category === 'all') {
-        query = `
+    if (params.category === 'all') {
+      query = `
         query {
           productCollection {
             items {
@@ -50,10 +49,9 @@ function Page({ params }: pageProps){
             }
           }
         }
-        `;
-
-      } else {
-         query = `
+      `;
+    } else if (['ring', 'earring', 'bracelet', 'necklace'].includes(params.category)) {
+      query = `
         query {
           productCollection (where: {name_contains: "${params.category}"}) {
             items {
@@ -69,65 +67,70 @@ function Page({ params }: pageProps){
             }
           }
         }
-        `;
+      `;
+    } else {
+      // Redirect to not-found page
+      setRedirectToNotFound(true);
+      return;
+    }
 
+    const fetchData = async () => {
+      try {
+        const response = await fetchGraphQL(query, space_id, access_token);
+        const data = await response.json();
+        console.log(data.data.productCollection.items);
+        setProducts(data.data.productCollection.items);
+      } catch (error) {
+        console.error("Error fetching Contentful data:", error);
       }
+    };
 
-  const [products, setProducts] = useState<Product[]>([])
+    fetchData();
+  }, [params.category]);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetchGraphQL(query, space_id, access_token);
-      const data = await response.json();
-      console.log(data.data.productCollection.items)
-      setProducts(data.data.productCollection.items);
-    } catch (error) {
-      console.error("Error fetching Contentful data:", error);
-    } 
+  const productData = {
+    imageUrl: "/pictures/ring.png",
+    title: "RingEarring",
+    price: "5.00",
   };
 
-  fetchData();
-}, []);
+  const handleAddToCart = () => {
+    // Handle adding to cart logic
+    console.log("Added to cart:", productData.title);
+  };
 
-const productData = {
-  imageUrl: "/pictures/ring.png",
-  title: "RingEarring",
-  price: "5.00",
-};
-
-const handleAddToCart = () => {
-  // Handle adding to cart logic
-  console.log("Added to cart:", productData.title);
-};
-
+  if (redirectToNotFound) {
+    // Redirect to not-found page
+    window.location.href = '/not-found';
+    return null; // You can also return a loading spinner or any other component
+  }
 
   return (
     <div className="container mx-auto md:p-8">
       <h1 className="text-4xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif m-[20px] mt-[30px]">
-      {params.category === "all" ? (
-        // Render if params.category is "all"
-        params.category[0].toUpperCase() + params.category.slice(1) + " products"
-      ) : (
-        // Render if params.category is not "all"
-        params.category[0].toUpperCase() + params.category.slice(1) + "s"
-      )}
-    </h1>
+        {params.category === "all" ? (
+          // Render if params.category is "all"
+          params.category[0].toUpperCase() + params.category.slice(1) + " products"
+        ) : (
+          // Render if params.category is not "all"
+          params.category[0].toUpperCase() + params.category.slice(1) + "s"
+        )}
+      </h1>
       <div className="flex justify-center">
         <section className="grid md:grid-cols-2 lg:grid-cols-3">
-          {products.map((product, item)=>(
-                    <Card
-                    imageUrl={product.picture.url}
-                    title={product.name}
-                    price={product.price}
-                    onAddToCart={handleAddToCart}
-                    key={item}
-                  />
+          {products.map((product, item) => (
+            <Card
+              imageUrl={product.picture.url}
+              title={product.name}
+              price={product.price}
+              onAddToCart={handleAddToCart}
+              key={item}
+            />
           ))}
-
         </section>
       </div>
     </div>
   );
 }
-export default  Page;
+
+export default Page;
