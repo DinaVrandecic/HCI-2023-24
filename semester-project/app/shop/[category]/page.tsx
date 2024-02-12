@@ -116,6 +116,7 @@ function Page({ params }: pageProps) {
           {products.map((product, item) => (
             <Card
               imageUrl={product.picture.url}
+              category={product.category}
               title={product.name}
               price={product.price}
               onAddToCart={handleAddToCart}

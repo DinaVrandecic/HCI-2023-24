@@ -85,34 +85,37 @@ function Search() {
   };
 
   return (
-    <div className="hidden md:flex lg:flex  items-center justify-evenly  shrink-5 relative">
-      <input
-        ref={inputRef}
-        onChange={handleInputChange}
-        type="text"
-        placeholder="Search..."
-        className="font-sans px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black text-sm w-32 lg:w-64 xl:w-80"
-      />
-      {searchReults.length > 0 && (
-        <div className="absolute w-full bg-white max-h-64 h-content top-full z-10 rounded-sm overflow-y-auto text-black">
-          {searchReults.map((product, index) => (
-            <Link
-              onClick={() => {
-                if (inputRef.current !== null) {
-                  inputRef.current.value = "";
-                }
-                setSearchResults([]);
-              }}
-              href={`/shop/${product.name}`}
-              key={index}
-            >
-              <div className="font-sans text-sm my-1" key={index}>
-                {product.name}
-              </div>
-            </Link>
-          ))}
+    <div className="flex items-center">
+        <div className="hidden md:flex lg:flex  items-center justify-evenly  shrink-5 relative">
+            <input
+                ref={inputRef}
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Search..."
+                className="block w-[80px] lg:w-full p-[3px] lg:px-4 py-2 text-brown1 bg-page_background focus:ring-peach1 focus:outline-none focus:ring focus:ring-opacity-70 font-serif text-xl"
+            />
+            {searchReults.length > 0 && (
+                <div className="absolute w-full bg-beige_text text-brown1 max-h-64 h-content top-[44px] z-10 rounded-sm overflow-y-auto">
+                {searchReults.map((product, index) => (
+                    <Link
+                    onClick={() => {
+                        if (inputRef.current !== null) {
+                        inputRef.current.value = "";
+                        }
+                        setSearchResults([]);
+                    }}
+                    href={`/shop/${product.category}/${product.name.trim().replaceAll(" ", "-")}`}
+                    key={index}
+                    >
+                    <div className="font-serif text-lg my-1 hover:bg-nf_blue" key={index}>
+                        {product.name}
+                    </div>
+                    </Link>
+                ))}
+            </div>
+            
+        )}
         </div>
-      )}
     </div>
   );
 }

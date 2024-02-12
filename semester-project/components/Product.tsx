@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-interface CardProps {
+interface ProductProps {
   imageUrl: string;
   category: string;
   title: string;
@@ -11,11 +11,11 @@ interface CardProps {
   onAddToCart: () => void;
 }
 
-const Card: React.FC<CardProps> = ({imageUrl, category, title, price, onAddToCart }) => {
+const Product: React.FC<ProductProps> = ({imageUrl, category, title, price, onAddToCart }) => {
   const urlNew = title.trim().replaceAll(" ", "-");
 
   return (
-    <div className="flex flex-col items-center bg-white w-fit h-fit m-[10px] hover:bg-beige_text hover:cursor-pointer">
+    <div className="flex flex-col items-center w-fit h-fit m-[10px]">
       <div className="m-[20px]">
         <Image
           src={imageUrl}
@@ -43,8 +43,4 @@ const Card: React.FC<CardProps> = ({imageUrl, category, title, price, onAddToCar
   );
 };
 
-export default Card;
-
-
-
-
+export default Product;
