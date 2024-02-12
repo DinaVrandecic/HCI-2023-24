@@ -68,7 +68,8 @@ function Page({ params }: pageProps) {
           }
         }
       `;
-    } else {
+    } 
+    else {
       // Redirect to not-found page
       setRedirectToNotFound(true);
       return;
@@ -88,15 +89,9 @@ function Page({ params }: pageProps) {
     fetchData();
   }, [params.category]);
 
-  const productData = {
-    imageUrl: "/pictures/ring.png",
-    title: "RingEarring",
-    price: "5.00",
-  };
-
   const handleAddToCart = () => {
     // Handle adding to cart logic
-    console.log("Added to cart:", productData.title);
+    console.log("Added to cart!");
   };
 
   if (redirectToNotFound) {
