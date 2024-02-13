@@ -37,7 +37,7 @@ const CustomerReviews: React.FC = () => (
           <Image src={a1} alt="Customer Review 1" className="review-image mb-5" width={350} height={350} />
           <div className="text-and-stars w-full ">
             <p className="font-serif font-bold text-blue1">SIOBHAN ROY</p>
-            <p className="font-serif italic mt-5 mb-2 text-brown1">
+            <p className="font-serif italic mt-5 mb-2 mx-[10px] text-brown1">
               "I absolutely love the jewelry I purchased. The quality is amazing and it is even
               more beautiful in person."
             </p>
@@ -51,7 +51,7 @@ const CustomerReviews: React.FC = () => (
           <Image src={a2} alt="Customer Review 2" className="review-image mb-5" width={350} height={350} />
           <div className="text-and-stars w-full">
             <p className="font-serif font-bold text-blue1">NADIA MORALES</p>
-            <p className="font-serif italic mt-5 mb-2 text-brown1">
+            <p className="font-serif italic mt-5 mb-2 mx-[10px] text-brown1">
               "The jewelry exceeded my expectations. It's elegant and the attention to detail is superb. Highly
               recommended!"
             </p>
@@ -65,7 +65,7 @@ const CustomerReviews: React.FC = () => (
           <Image src={a3} alt="Customer Review 3" className="review-image mb-5" width={350} height={350} />
           <div className="text-and-stars w-full ">
             <p className="font-serif font-bold text-blue1">PAMELA BEESLY-HALPERT</p>
-            <p className="font-serif italic mt-5 mb- text-brown1">
+            <p className="font-serif italic mt-5 mb-2 mx-[10px] text-brown1">
               "Beautiful pieces! I received many compliments wearing them. The shipping was fast and the
               packaging was lovely."
             </p>

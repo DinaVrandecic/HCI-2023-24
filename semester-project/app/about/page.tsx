@@ -5,7 +5,7 @@ import vision from "../../public/pictures/vision.png";
 export default function About() {
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <h1 className="text-4xl md:text-6xl font-bold mb-15 text-center text-dark_blue font-serif">About us</h1>
+      <h1 className="text-4xl md:text-5xl font-bold mb-15 text-center text-dark_blue font-serif">About us</h1>
 
       <section className="flex flex-col md:flex-row  items-center justify-around mb-8 my-[50px] ">
         <div className=" mb-4 mt-8 md:mb-0 relative order-2 md:order-1 mr-[30px] md:mr-[0px]">
