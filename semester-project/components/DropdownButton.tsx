@@ -51,13 +51,13 @@ const Dropdown: React.FC<DropdownProps> = ({ link }) => {
             }
             key={path}
 >
-            {name === "all" ? (
-              // Render if params.category is "all"
-              name[0].toUpperCase() + name.slice(1) + " products"
-            ) : (
-              // Render if params.category is not "all"
-              name[0].toUpperCase() + name.slice(1) + "s"
-            )} 
+          {name === "all" ? (
+            // Render if params.category is "all"
+            name[0].toUpperCase() + name.slice(1) + " products"
+          ) : (
+            // Render if params.category is not "all"
+            name[0].toUpperCase() + name.slice(1) + "s"
+          )} 
             </Link>
 
           ))}
