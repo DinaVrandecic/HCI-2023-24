@@ -78,12 +78,10 @@ function Page({ params }: pageProps) {
   console.log(product)
 
   return (
-    <div >
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-dark_blue font-serif m-[20px] ">
+    <div className="flex justify-center items-center flex-col">
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-dark_blue font-serif m-[30px] ">
           {product.name}
       </h1>
-      <div className="flex justify-center">
-        <section>
             {product.picture && product.picture.url && <Product
               imageUrl={product.picture.url}
               category={product.category}
@@ -91,8 +89,6 @@ function Page({ params }: pageProps) {
               price={product.price}
               onAddToCart={handleAddToCart}
             />  }
-        </section>
-      </div>
     </div>
   );
 }

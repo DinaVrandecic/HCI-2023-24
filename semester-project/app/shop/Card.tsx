@@ -15,31 +15,31 @@ const Card: React.FC<CardProps> = ({imageUrl, category, title, price, onAddToCar
   const urlNew = title.trim().replaceAll(" ", "-");
 
   return (
-    <div className="flex flex-col items-center bg-white w-fit h-fit m-[10px] hover:bg-beige_text hover:cursor-pointer">
-      <div className="m-[20px]">
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={300}
-          height={300}
-          style={{ width: '300px', height: '300px' }}
-        />
-      </div>
-      <p className="font-serif text-xl font-bold whitespace-break-spaces text-blue1">
-        {title}
-      </p>
-      <p className="font-serif text-xl font-bold whitespace-break-spaces text-brown1">
-        {price}
-      </p>
-      <Link href={"/shop/" + category + "/" + urlNew}>
-        <button
-          className="font-serif text-dark_blue bg-peach1 hover:text-peach1 hover:bg-dark_blue p-[7px] m-[10px] rounded-sm"
-          onClick={onAddToCart}
-          >
-          Add to cart
-        </button>
+      <Link href={"/shop/" + category + "/" + urlNew} 
+            className="flex flex-col items-center bg-white w-fit h-fit m-[10px] hover:bg-beige_text hover:cursor-pointer">
+        <div className="m-[20px]">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={300}
+            height={300}
+            style={{ width: '300px', height: '300px' }}
+          />
+        </div>
+        <p className="font-serif text-xl font-bold whitespace-break-spaces text-blue1">
+          {title}
+        </p>
+        <p className="font-serif text-xl font-bold whitespace-break-spaces text-brown1">
+          {price}
+        </p>
+        
+          <button
+            className="font-serif text-dark_blue bg-peach1 hover:text-peach1 hover:bg-dark_blue p-[7px] m-[10px] rounded-sm"
+            onClick={onAddToCart}
+            >
+            View
+          </button>
       </Link>
-    </div>
   );
 };
 
