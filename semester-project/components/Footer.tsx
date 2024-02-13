@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className="p-8 font-serif text-blue1 md:w-1/3 text-center">
           <h1 className="font-bold mb-4">SITEMAP</h1>
-          <Link legacyBehavior href="/shop">
+          <Link legacyBehavior href="/shop/all">
             <a className="block mb-2 hover:text-peach1">Shop</a>
           </Link>
           <Link legacyBehavior href="/about">
@@ -44,10 +44,10 @@ export default function Footer() {
         <div className="p-8 font-serif text-blue1 md:w-1/3 text-center">
           <p className="font-bold mb-4"> CONTACT </p>
           <p></p>
-            <p className=" text-center"> +385 007 700  </p>
-            <p className=" text-center"> elina@elina.hr  </p>
-            <p className=" text-center"> Ulica R.Boskovica  </p>
-            <p className=" text-center"> 21000, Split, Croatia  </p>
+          <p className=" text-center"> +385 007 700 </p>
+          <p className=" text-center"> elina@elina.hr </p>
+          <p className=" text-center"> Ulica R.Boskovica </p>
+          <p className=" text-center"> 21000, Split, Croatia </p>
         </div>
       </div>
     </div>
