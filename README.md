@@ -1,5 +1,6 @@
 # ELINA JEWELRY WEBSHOP by Dina & Ela
 Latest Vercel deployment: https://elina.vercel.app/
+Project Report in Notion: https://es00.notion.site/HCI-izvje-taj-ac103347da2443698dcf2480b11c2398?pvs=4
 
 ### WEEKLY PROGRESS, STATUS AND PROBLEMS 4/4
 - Implementacija contentful-a
