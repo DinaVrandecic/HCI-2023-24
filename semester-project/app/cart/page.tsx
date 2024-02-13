@@ -39,9 +39,12 @@ function ShoppingCartPage() {
 
       {cartArray.length && (
         <div className="flex flex-col justify-center items-center w-full">
-          {cartArray.map((cartItem) => {
+          {cartArray.map((cartItem, index) => {
             return (
-              <div className="flex bg-white gap-2 mt-[20px] justify-center items-center w-11/12 lg:w-2/4">
+              <div
+                key={index}
+                className="flex bg-white gap-2 mt-[20px] justify-center items-center w-11/12 lg:w-2/4"
+              >
                 <img
                   className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] p-[10px]"
                   src={cartItem.picture.url}
