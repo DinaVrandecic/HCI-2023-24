@@ -29,7 +29,7 @@ function ShoppingCartPage() {
           <h4 className="text-dark_blue font-serif font-bold mt-3">
             Add something!{" "}
           </h4>
-          <Link legacyBehavior href="/shop">
+          <Link legacyBehavior href="/shop/all">
             <a className="bg-dark_blue font-serif hover:bg-peach1 text-peach1 hover:text-dark_blue py-2 px-4 mt-3 mb-3 text-serif">
               SHOP ALL
             </a>
