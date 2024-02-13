@@ -65,7 +65,7 @@ const CustomerReviews: React.FC = () => (
           <Image src={a3} alt="Customer Review 3" className="review-image mb-5" width={350} height={350} />
           <div className="text-and-stars w-full ">
             <p className="font-serif font-bold text-blue1">PAMELA BEESLY-HALPERT</p>
-            <p className="font-serif italic mt-5 mb-2 mx-[10px] text-brown1">
+            <p className="font-serif italic mt-5 mb-2 mx-[5px] text-brown1">
               "Beautiful pieces! I received many compliments wearing them. The shipping was fast and the
               packaging was lovely."
             </p>

@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import './globals.css'
 import Hamburger from "../components/Hamburger"
+import { ContextProvider } from './context/context';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,13 +44,14 @@ export default function RootLayout({
     <html lang="en">
 <body className={`${inter.className} bg-page_background`}>
 
-
-      <Navbar pages={pages} />
-      <Hamburger pages={pages} />
-        {children}
-        <Footer />
-      </body>
-
+      <ContextProvider>
+        <Navbar pages={pages} />
+        <Hamburger pages={pages} />
+          {children}
+          <Footer />
+          </ContextProvider>
+        </body>
+       
     </html>
   );
 }

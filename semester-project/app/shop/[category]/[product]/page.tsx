@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
-import Product from "../../../../components/Product"
+import Product from "../../../../components/Product";
 import { fetchGraphQL } from "@/lib/contentfulFetch";
+import { useContext } from "@/app/context/context";
 
 const space_id = "w4hubm46n8vc";
 const access_token = "N45HXFp-MbSa4GvLTotphSM4O3Ey5jCx9Qvb8-9p5PE";
@@ -31,8 +32,9 @@ function Page({ params }: pageProps) {
   const [product, setProduct] = useState<Product>({} as Product);
   const productName = params.product.replace(/-/g, " ");
 
+  const { cartArray, addToCart } = useContext();
+
   useEffect(() => {
-    console.log(productName)
     const query = `
     query {
       productCollection (where: {name: "${productName}"}) {
@@ -66,29 +68,30 @@ function Page({ params }: pageProps) {
   }, [params.category]);
 
   const handleAddToCart = () => {
-    // Handle adding to cart logic
-    console.log("Added to cart!");
+    addToCart(product);
   };
 
   if (redirectToNotFound) {
     // Redirect to not-found page
-    window.location.href = '/not-found';
+    window.location.href = "/not-found";
     return null; // You can also return a loading spinner or any other component
   }
-  console.log(product)
+  console.log(product);
 
   return (
     <div className="flex justify-center items-center flex-col">
       <h1 className="text-2xl md:text-4xl font-bold text-center text-dark_blue font-serif m-[30px] ">
-          {product.name}
+        {product.name}
       </h1>
-            {product.picture && product.picture.url && <Product
-              imageUrl={product.picture.url}
-              category={product.category}
-              title={product.name}
-              price={product.price}
-              onAddToCart={handleAddToCart}
-            />  }
+      {product.picture && product.picture.url && (
+        <Product
+          imageUrl={product.picture.url}
+          category={product.category}
+          title={product.name}
+          price={product.price}
+          onAddToCart={handleAddToCart}
+        />
+      )}
     </div>
   );
 }
