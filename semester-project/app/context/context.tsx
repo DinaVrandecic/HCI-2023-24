@@ -35,7 +35,12 @@ const MyProvider = ({ children }: MyProviderProps) => {
   };
 
   const addToCart = (item: Product) => {
-    setCart([...cartArray, item]);
+    const existingItem = cartArray.find(
+      (cartItem) => cartItem.name === item.name
+    );
+    if (!existingItem) {
+      setCart([...cartArray, item]);
+    }
   };
 
   const removeItemFromCart = (item: Product) => {
